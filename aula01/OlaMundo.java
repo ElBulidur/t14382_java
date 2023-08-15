@@ -1,4 +1,5 @@
 package aula01;
+
 public class OlaMundo{
     public static void main (String[] args){
         
@@ -26,7 +27,6 @@ public class OlaMundo{
         // Incremento ++
         // Decremento --
         // Logica ? :
-
         
         // OPERADORES LOGICOS
         // MENOR QUE          <
@@ -42,7 +42,7 @@ public class OlaMundo{
 
         int hora = 19;
 
-        // LOOPS
+        // CONDICIONAL
         if (hora < 12){
             System.out.println(dois);
         } else if (hora < 18){
