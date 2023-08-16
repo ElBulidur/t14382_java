@@ -1,6 +1,8 @@
-package aula02;
+package aula02.views;
 
-public class AulaDois {
+import aula02.Domain.entities.Funcionario;
+
+public class AppConsole {
     public static void main (String[] args){
         
         String meses[] = {"JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL",
@@ -38,6 +40,14 @@ public class AulaDois {
         .append(s2);
 
         System.out.println("Frase 01: "+ fraseTres);
+
+        Funcionario julio = new Funcionario();
+
+        julio.setNome("Julio Pereira");
+        julio.setSalario(200.90);
+        julio.setSetor("Instrutor");
+
+        System.out.print(julio);
 
 
     }
