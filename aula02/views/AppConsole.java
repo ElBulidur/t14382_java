@@ -39,6 +39,8 @@ public class AppConsole {
         .append(" ")
         .append(s2);
 
+        
+
         System.out.println("Frase 01: "+ fraseTres);
 
         Funcionario julio = new Funcionario();
