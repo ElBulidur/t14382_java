@@ -1,16 +1,20 @@
 package aula04.src.views;
 
+import java.sql.Connection;
+
+
 import aula04.src.application.controllers.FuncionarioController;
+//import aula04.src.infra.databases.ConnectionMysql;
 
 public class AppConsole {
     public static void main (String[] args){
 
-        var funcionario1 = new FuncionarioController();
+        //var funcionario1 = new FuncionarioController();
         
-        funcionario1.cadastraFuncionario(
-            "Julio", "Instrutor", 200.00, true);
+        //funcionario1.cadastraFuncionario(
+           // "Julio", "Instrutor", 200.00, true);
 
-        System.out.print(funcionario1.mostraSalario());
+        //System.out.print(funcionario1.mostraSalario());
 
         // stack memory
         int x = 10;
@@ -40,6 +44,10 @@ public class AppConsole {
 
         //System.out.println(arr[0]); //henrique
         //System.out.println(arr2[0]); //henrique
+
+        //var conexao = new ConnectionMysql().getConnection();
+
+        //System.out.println(conexao);
 
     }
 }
