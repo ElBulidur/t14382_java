@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import aula04.src.domain.entities.Funcionario;
+import aula05.src.domain.entities.Funcionario;
 
 public class MysqlDB {
 
@@ -22,7 +22,6 @@ public class MysqlDB {
         try {
             return DriverManager.getConnection(url, usuario, password);
         } catch (SQLException e) {
-            System.out.println("estourou!!");
             throw new RuntimeException(e);
         }
    }
