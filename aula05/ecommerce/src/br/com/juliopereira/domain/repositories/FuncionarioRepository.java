@@ -17,7 +17,7 @@ public class FuncionarioRepository {
 		this.conn = new MysqlDB().getConnection();
 	}
 	
-	// criar
+	// criar(CREATE)
 	public void Criar(String nome, String setor, Double salario, Boolean ativo){
         String sql = "INSERT INTO funcionarios(nome, setor, salario, ativo)"+
         " VALUES(?,?,?,?)";
@@ -37,6 +37,7 @@ public class FuncionarioRepository {
         }
 	}
 	
+	//Ler (READ)
 	public ArrayList<Funcionario> LerFuncionarios() {
 		String sql = "SELECT * from funcionarios";
 		
@@ -97,6 +98,7 @@ public class FuncionarioRepository {
 		
 	}
 	
+	// Atualizar (UPDATE)
 	public void Atualizar(int id, String nome, String setor, Double salario, Boolean ativo){
         String sql = "UPDATE funcionarios set nome = ?, setor = ?, salario = ?, ativo = ? WHERE id = ?";
 
@@ -116,6 +118,7 @@ public class FuncionarioRepository {
         }
 	}
 	
+	// Deletar(DELETE)
 	public void Deletar(int id) {
 		String sql = "DELETE FROM funcionarios WHERE id = ?";
 		
