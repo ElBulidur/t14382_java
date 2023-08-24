@@ -1,9 +1,11 @@
-package br.com.juliopereira;
+package br.com.juliopereira.classes;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import br.com.juliopereira.MysqlDB;
 
 public class BaseRepository {
 	private Connection conn;

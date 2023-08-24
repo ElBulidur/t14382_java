@@ -8,11 +8,24 @@ public class AppConsole {
 		
 		FuncionarioController srv = new FuncionarioController();
 		
-		//srv.CadastrarFuncionario("Henrique", "Tester", 450.63, true);
+		// TESTES COM FUNCIONARIOCONTROLLEREXEMPLO
 		//srv.ImprimirFunciopnarios();
 		//srv.ImprimirDadosFuncionario(1);
 		//srv.AtualizarFuncionario(1, "Julio Pereira", "Instrutor", 120.40, true);
 		//srv.DeletarFuncionario(2);
+		
+		//TESTES COM FUNCIONARIOCONTROLLER
+		//srv.CriaFuncionario("Henrique", "Tester", 450.63);
+		//srv.AtualizarFuncionario(1, "Julio Pereira", "Instrutor", 1500.54);
+		
+		var funcionarios = srv.PegarFuncionarios();
+		var funcionario = srv.PegarFuncionarioPorId(1);
+		
+		//funcionarios.forEach(funcionario -> System.out.println(funcionario.nome));
+		
+		if (funcionario != null)
+		 System.out.println(funcionario.nome);
+		
 		
 
 	}

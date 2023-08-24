@@ -1,7 +1,9 @@
-package br.com.juliopereira;
+package br.com.juliopereira.classes;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import br.com.juliopereira.ProdutoEntity;
 
 public class ProdutoRepository extends BaseRepository {
 

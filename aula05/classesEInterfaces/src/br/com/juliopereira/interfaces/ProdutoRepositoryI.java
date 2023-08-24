@@ -1,8 +1,11 @@
-package br.com.juliopereira;
+package br.com.juliopereira.interfaces;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import br.com.juliopereira.MysqlDB;
+import br.com.juliopereira.ProdutoEntity;
 
 public class ProdutoRepositoryI implements IBaseRepository<ProdutoEntity> {
 	public String table = "produtos";

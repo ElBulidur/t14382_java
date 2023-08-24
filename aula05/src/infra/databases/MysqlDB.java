@@ -24,6 +24,7 @@ public class MysqlDB {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
    }
     
 }

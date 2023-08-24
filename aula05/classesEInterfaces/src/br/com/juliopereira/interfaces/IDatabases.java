@@ -1,4 +1,4 @@
-package br.com.juliopereira;
+package br.com.juliopereira.interfaces;
 
 import java.sql.Connection;
 

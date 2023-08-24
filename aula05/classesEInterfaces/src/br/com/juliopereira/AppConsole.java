@@ -2,6 +2,8 @@ package br.com.juliopereira;
 
 import java.sql.Connection;
 
+import br.com.juliopereira.abstracao.ProdutoRepositoryCA;
+
 public class AppConsole {
 
 	public static void main(String[] args) {

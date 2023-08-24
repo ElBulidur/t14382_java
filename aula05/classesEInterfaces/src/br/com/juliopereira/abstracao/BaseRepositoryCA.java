@@ -1,4 +1,4 @@
-package br.com.juliopereira;
+package br.com.juliopereira.abstracao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import br.com.juliopereira.MysqlDB;
 
 public abstract class BaseRepositoryCA<Entity> {
 	private Connection conn;
@@ -129,7 +131,6 @@ public abstract class BaseRepositoryCA<Entity> {
 	public void setUpdateSQL(String sql) {
 		this.updateSQL = sql;
 	}
-	
 	
 
 }

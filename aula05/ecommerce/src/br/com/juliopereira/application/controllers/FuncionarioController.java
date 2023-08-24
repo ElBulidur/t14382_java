@@ -6,49 +6,55 @@ import br.com.juliopereira.domain.entidades.Funcionario;
 import br.com.juliopereira.domain.repositories.FuncionarioRepository;
 
 public class FuncionarioController {
-
 	private FuncionarioRepository repo;
 	
 	public FuncionarioController() {
 		this.repo = new FuncionarioRepository();
 	}
 	
-	public void CadastrarFuncionario(String nome, String setor, Double salario, Boolean ativo) {
-		//var newFuncionario = new Object();
-
-		repo.Criar(nome, setor, salario, ativo);
+	public void CriaFuncionario(String nome, String setor, Double salario) {
+		Funcionario funcionario = new Funcionario();
 		
-		System.out.println("Criado com sucesso!");
+		funcionario.nome = nome;
+		funcionario.setor = setor;
+		funcionario.salario = salario;
+		funcionario.ativo = true;
 		
+		this.repo.Criar(funcionario);
+		
+		System.out.println("Funcionario CRIADO com sucesso!!!");
 	}
 	
-	public void ImprimirFunciopnarios() {
-		ArrayList<Funcionario> funcionarios = repo.LerFuncionarios();
+	public void AtualizarFuncionario(int id, String nome, String setor, Double salario) {
+		Funcionario funcionario = new Funcionario();
+
+		funcionario.id = id;
+		funcionario.nome = nome;
+		funcionario.setor = setor;
+		funcionario.salario = salario;
 		
-		for (Funcionario u: funcionarios) {			
-			System.out.println(u);
+		this.repo.Atualizar(funcionario);
+
+		System.out.println("Funcionario ATUALIZADO com sucesso!!!");
+	}
+	
+	public ArrayList<Funcionario> PegarFuncionarios(){
+		return this.repo.PegarTodos();
+	}
+	
+	public Funcionario PegarFuncionarioPorId(int id) {
+		var result = this.repo.PegarPorId(id);
+		
+		if(result == null) {
+			System.out.println("Nao foi encontrado este funcionario no banco!!!");
 		}
 		
+		return result;
 		
-	}
-	
-	public void ImprimirDadosFuncionario(int id) {
-		Funcionario funcionario = repo.LerFuncionarioPorId(id);
-		System.out.println(funcionario.nome);
-		
-	}
-	
-	public void AtualizarFuncionario(int id, String nome, String setor, Double salario, boolean ativo) {
-		repo.Atualizar(id, nome, setor, salario, ativo);
-		System.out.println("Atualizado com sucesso!!!");
 	}
 	
 	public void DeletarFuncionario(int id) {
-		repo.Deletar(id);
-		
-		System.out.print("Deletado com sucesso!!!");
+		this.repo.Deletar(id);
 	}
-	
-	
 	
 }
