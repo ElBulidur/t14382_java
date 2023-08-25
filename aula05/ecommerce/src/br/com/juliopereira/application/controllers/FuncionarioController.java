@@ -21,8 +21,6 @@ public class FuncionarioController {
 		funcionario.ativo = true;
 		
 		this.repo.Criar(funcionario);
-		
-		System.out.println("Funcionario CRIADO com sucesso!!!");
 	}
 	
 	public void AtualizarFuncionario(int id, String nome, String setor, Double salario) {
