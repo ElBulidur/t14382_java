@@ -10,3 +10,4 @@ public interface Operacao {
 	BigDecimal efetua(BigDecimal num1, BigDecimal num2);
 }
 
+

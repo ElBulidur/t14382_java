@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class TelaCadastroFuncionario {
 
@@ -126,6 +127,7 @@ public class TelaCadastroFuncionario {
 		panel.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Cadastro de funcionário");
+		lblNewLabel.setBackground(new Color(0, 64, 0));
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblNewLabel);
